@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.CATPart
+*.CATProduct
+*.jpg
+*.png
+!examples/*.png
+!examples/*.json
+.idea/
+.vscode/

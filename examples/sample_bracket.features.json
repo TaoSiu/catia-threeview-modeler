@@ -1,0 +1,67 @@
+{
+  "product_name": "Bracket",
+  "unit": "mm",
+  "output_dir": "O:/catia建模skill",
+  "datum": {
+    "origin": "base_corner",
+    "main_plane": "XY",
+    "note": "底板角点在原点；底板对称面平行于X轴"
+  },
+  "parts": [
+    {
+      "name": "Bracket",
+      "features": [
+        {
+          "type": "pad",
+          "id": "base",
+          "plane": "XY",
+          "height": 10,
+          "profiles": [
+            {
+              "loop": [
+                {"e": "line", "p1": [0, 0], "p2": [100, 0]},
+                {"e": "line", "p1": [100, 0], "p2": [100, 60]},
+                {"e": "line", "p1": [100, 60], "p2": [0, 60]},
+                {"e": "line", "p1": [0, 60], "p2": [0, 0]}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "hole",
+          "id": "h1",
+          "on": "base",
+          "face": "top",
+          "point3d": [20, 30, 10],
+          "diameter": 12,
+          "depth": 10
+        },
+        {
+          "type": "hole",
+          "id": "h2",
+          "on": "base",
+          "face": "top",
+          "point3d": [80, 30, 10],
+          "diameter": 12,
+          "depth": 10
+        },
+        {
+          "type": "pocket",
+          "id": "pocket1",
+          "on": "base",
+          "depth": 5,
+          "profiles": [
+            {"e": "circle", "c": [50, 30], "r": 18}
+          ]
+        },
+        {
+          "type": "fillet",
+          "id": "f1",
+          "on": "base",
+          "radius": 3
+        }
+      ],
+      "position": [0, 0, 0]
+    }
+  ]
+}
